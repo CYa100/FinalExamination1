@@ -11,6 +11,8 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.compose.rememberNavController
+import com.yeditepe.finalexamination.navigation.NavGraph
 import com.yeditepe.finalexamination.ui.theme.FinalExaminationTheme
 
 class MainActivity : ComponentActivity() {
@@ -42,6 +44,7 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 @Composable
 fun GreetingPreview() {
     FinalExaminationTheme {
-        Greeting("Android")
+        NavGraph(navController = rememberNavController())
+        //Greeting("Android")
     }
 }
